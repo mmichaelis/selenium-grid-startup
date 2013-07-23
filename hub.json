@@ -1,0 +1,17 @@
+// see org/openqa/grid/common/defaults/DefaultHub.json
+{
+  "host": null,
+  "port": 4445,
+  "newSessionWaitTimeout": -1,
+  "servlets": [],
+  "prioritizer": null,
+  "capabilityMatcher": "org.openqa.grid.internal.utils.DefaultCapabilityMatcher",
+  "throwOnCapabilityNotPresent": true,
+  "nodePolling": 5000,
+
+  "cleanUpCycle": 5000,
+  "timeout": 300000,
+  "browserTimeout": 120,
+  "nodeTimeout":  120,
+  "maxSession": 5
+}

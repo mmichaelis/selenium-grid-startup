@@ -1,5 +1,5 @@
     hub:
-        port: 5555
+        port: 4445
         newSessionMaxWaitTimeInSeconds: 0
         remoteControlPollingIntervalInSeconds: 180
         sessionMaxIdleTimeInSeconds: 600
