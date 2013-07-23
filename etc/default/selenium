@@ -13,15 +13,15 @@ JAVA_ARGS="-Xmx256m"
 PIDFILE=/var/run/selenium/selenium.pid
 
 # user id to be invoked as (otherwise will run as root; not wise!)
-SELENIUM_USER=selenium
+SELENIUM_USER=coremedia-ci
 
 # selenium grid home location
 SELENIUM_HOME=/var/lib/selenium
 
 # log location.  
+SELENIUM_OUT=/var/log/selenium/$NAME.out
 SELENIUM_LOG=/var/log/selenium/$NAME.log
 
-SELENIUM_PORT=5555
 
 # OS LIMITS SETUP
 #   comment this out to observe /etc/security/limits.conf
@@ -30,4 +30,4 @@ SELENIUM_PORT=5555
 #   descriptors are forced to 1024 regardless of /etc/security/limits.conf
 MAXOPENFILES=8192
 
-SELENIUM_ARGS="-jar ${SELENIUM_HOME}/selenium-server-standalone.jar -role hub  -grid1Yml ${SELENIUM_HOME}/grid.yml -port ${SELENIUM_PORT}"
+SELENIUM_ARGS="-jar ${SELENIUM_HOME}/selenium-server-standalone.jar -role hub -log ${SELENIUM_LOG} -hubConfig ${SELENIUM_HOME}/hub.json"
